@@ -1,12 +1,364 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Easypanel Static Sample</title>
-  </head>
-  <body>
-    <h1>Easypanel Static Sample</h1>
-  </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel Instagram - Code Verse AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .instagram-slide {
+            width: 600px;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .slide-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .orange-text {
+            color: #FF6B00;
+        }
+        .slide-number {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(255, 107, 0, 0.9);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .benefit-icon {
+            background-color: #FF6B00;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .cta-button {
+            background-color: #FF6B00;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 107, 0, 0.4);
+        }
+        .tech-box {
+            background-color: rgba(0,0,0,0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .tech-icon {
+            background-color: #333;
+            color: #FF6B00;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        .stats-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FF6B00, #FF9D00);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 15px;
+        }
+        .stats-number {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .stats-label {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 5px;
+        }
+        .page-title {
+            text-align: center;
+            margin: 30px 0;
+            color: #333;
+        }
+        .slide-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 640px;
+            margin: 0 auto 60px auto;
+        }
+        .slide-title {
+            margin: 0 0 10px 0;
+            font-weight: 700;
+            color: #333;
+        }
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .particle {
+            position: absolute;
+            background-color: rgba(255, 107, 0, 0.4);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-title text-3xl font-bold">Carrusel Instagram - Code Verse AI</h1>
+    
+    <!-- Slide 1: Impactful Opening -->
+    <div class="slide-container">
+        <h3 class="slide-title text-xl">Slide 1: Portada</h3>
+        <div class="instagram-slide bg-black">
+            <div class="particles" id="particles-1"></div>
+            <div class="slide-content">
+                <div class="text-center z-10">
+                    <h2 class="text-white text-4xl font-bold mb-4">AUTOMATIZA TU</h2>
+                    <h1 class="orange-text text-5xl font-black mb-6">ATENCIÓN AL<br>CLIENTE 24/7</h1>
+                    <p class="text-white text-lg mb-8">Soluciones de IA para no perder ninguna oportunidad</p>
+                    
+                    <div class="mt-8">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/simpleicons.svg" width="40" class="mx-auto mb-2 opacity-50" alt="Code Verse AI">
+                        <p class="text-white">CODE VERSE AI</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">1</div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Why it's crucial -->
+    <div class="slide-container">
+        <h3 class="slide-title text-xl">Slide 2: ¿Por qué es crucial?</h3>
+        <div class="instagram-slide bg-white">
+            <div class="slide-content">
+                <h2 class="text-3xl font-bold mb-6 text-center">¿POR QUÉ ES <span class="orange-text">CRUCIAL</span>?</h2>
+                
+                <div class="w-full">
+                    <div class="flex justify-center mb-8">
+                        <div class="stats-circle">
+                            <div class="stats-number">78%</div>
+                            <div class="stats-label">de clientes buscan respuestas inmediatas</div>
+                        </div>
+                        
+                        <div class="stats-circle">
+                            <div class="stats-number">33%</div>
+                            <div class="stats-label">abandonan si esperan más de 5 min</div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-center mb-4">Las empresas pierden <span class="orange-text font-bold">$75 mil millones</span> al año debido a una mala atención al cliente</p>
+                    
+                    <p class="text-center font-semibold">¿Cuánto te está costando a ti?</p>
+                </div>
+            </div>
+            <div class="slide-number">2</div>
+        </div>
+    </div>
+    
+    <!-- Slide 3: Benefits -->
+    <div class="slide-container">
+        <h3 class="slide-title text-xl">Slide 3: Beneficios comprobados</h3>
+        <div class="instagram-slide bg-white">
+            <div class="slide-content">
+                <h2 class="text-3xl font-bold mb-6 text-center">BENEFICIOS <span class="orange-text">COMPROBADOS</span></h2>
+                
+                <div class="w-full">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i data-feather="clock"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Atención 24/7</h3>
+                            <p class="text-sm">Sin costes adicionales de personal</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i data-feather="zap"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Respuestas inmediatas</h3>
+                            <p class="text-sm">En menos de 5 segundos</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i data-feather="bar-chart-2"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Reducción de costos</h3>
+                            <p class="text-sm">Hasta un 35% en atención al cliente</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i data-feather="users"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Mayor satisfacción</h3>
+                            <p class="text-sm">Experiencia consistente en todos los canales</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">3</div>
+        </div>
+    </div>
+    
+    <!-- Slide 4: Technology Explanation -->
+    <div class="slide-container">
+        <h3 class="slide-title text-xl">Slide 4: Tecnología avanzada</h3>
+        <div class="instagram-slide bg-white">
+            <div class="slide-content">
+                <h2 class="text-3xl font-bold mb-6 text-center">TECNOLOGÍA <span class="orange-text">AVANZADA</span></h2>
+                
+                <div class="w-full">
+                    <div class="tech-box">
+                        <div class="tech-icon">
+                            <i data-feather="message-circle"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">NLP</h3>
+                            <p class="text-sm">Comprende el lenguaje natural de tus clientes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-box">
+                        <div class="tech-icon">
+                            <i data-feather="smartphone"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Integración con WhatsApp</h3>
+                            <p class="text-sm">Donde tus clientes ya están</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-box">
+                        <div class="tech-icon">
+                            <i data-feather="globe"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Multicanal</h3>
+                            <p class="text-sm">Web, email, redes sociales y más</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">4</div>
+        </div>
+    </div>
+    
+    <!-- Slide 5: Call to Action -->
+    <div class="slide-container">
+        <h3 class="slide-title text-xl">Slide 5: Llamada a acción</h3>
+        <div class="instagram-slide bg-gradient-to-br from-black to-gray-800">
+            <div class="particles" id="particles-5"></div>
+            <div class="slide-content">
+                <h2 class="text-white text-3xl font-bold mb-3 text-center">¿LISTO PARA TRANSFORMAR</h2>
+                <h2 class="orange-text text-3xl font-bold mb-6 text-center">TU NEGOCIO?</h2>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg mb-6 backdrop-filter backdrop-blur-sm">
+                    <p class="text-white text-center mb-4">Solicita hoy mismo una DEMO GRATUITA y descubre el poder de la automatización inteligente</p>
+                    
+                    <a href="#" class="cta-button block w-full text-center">CONTÁCTANOS HOY</a>
+                </div>
+                
+                <div class="mt-4">
+                    <p class="text-white text-sm text-center">www.codeverseai.com</p>
+                    <p class="text-white font-bold text-center">CODE VERSE AI</p>
+                </div>
+            </div>
+            <div class="slide-number">5</div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Feather icons
+        document.addEventListener('DOMContentLoaded', () => {
+            feather.replace();
+            
+            // Create particles for decorative backgrounds
+            createParticles('particles-1', 20);
+            createParticles('particles-5', 15);
+        });
+        
+        function createParticles(containerId, count) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            
+            for (let i = 0; i < count; i++) {
+                const size = Math.random() * 10 + 5;
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.opacity = Math.random() * 0.5 + 0.1;
+                
+                container.appendChild(particle);
+            }
+        }
+    </script>
+</body>
 </html>
+
+
