@@ -1,14 +1,15 @@
 # Imagen base de Nginx
 FROM nginx:alpine
 
-# Eliminar el contenido por defecto de Nginx
+# Eliminar archivos por defecto
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copiar los archivos de la página web al contenedor
+# Copiar tu página
 COPY . /usr/share/nginx/html
 
-# Exponer el puerto 80
+# Copiar configuración personalizada
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 80
 
-# Iniciar Nginx
 CMD ["nginx", "-g", "daemon off;"]
