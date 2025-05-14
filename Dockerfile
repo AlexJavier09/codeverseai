@@ -11,7 +11,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 RUN mkdir -p /usr/share/nginx/html
 
 # Copiar los archivos de la aplicación
-COPY ./dist /usr/share/nginx/html
+COPY . /usr/share/nginx/html
 
 # Crear directorio para certbot
 RUN mkdir -p /var/www/certbot
