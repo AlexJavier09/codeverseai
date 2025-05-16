@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Code Verse AI ofrece soluciones de automatización inteligente con IA para empresas. Mejora la atención al cliente, automatiza procesos y optimiza operaciones con nuestros agentes de IA personalizables.">
-    <meta name="keywords" content="inteligencia artificial, automatización, IA, chatbot, atención al cliente, Code Verse, asistente virtual, automatización de procesos">
+    <meta name="description"
+        content="Code Verse AI ofrece soluciones de automatización inteligente con IA para empresas. Mejora la atención al cliente, automatiza procesos y optimiza operaciones con nuestros agentes de IA personalizables.">
+    <meta name="keywords"
+        content="inteligencia artificial, automatización, IA, chatbot, atención al cliente, Code Verse, asistente virtual, automatización de procesos">
     <title>Code Verse AI - Soluciones Inteligentes de Automatización</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #FF6600;
@@ -17,7 +21,7 @@
             --gray: #f5f5f5;
             --dark-gray: #333333;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
@@ -25,13 +29,13 @@
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
-        
+
         body {
             overflow-x: hidden;
             background-color: var(--light);
             color: var(--secondary);
         }
-        
+
         .navbar {
             background-color: rgba(255, 255, 255, 0.95);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -43,49 +47,49 @@
             padding: 15px 0;
             transition: all 0.3s ease;
         }
-        
+
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .navbar-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--secondary);
         }
-        
+
         .logo span {
             color: var(--primary);
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
         }
-        
+
         .nav-links li {
             margin-left: 30px;
         }
-        
+
         .nav-links a {
             color: var(--secondary);
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
         }
-        
+
         .nav-links a:hover {
             color: var(--primary);
         }
-        
+
         .nav-links .contact-btn {
             background-color: var(--primary);
             color: white;
@@ -93,17 +97,17 @@
             border-radius: 5px;
             transition: all 0.3s ease;
         }
-        
+
         .nav-links .contact-btn:hover {
             background-color: #e65c00;
             color: white;
         }
-        
+
         .hamburger {
             display: none;
             cursor: pointer;
         }
-        
+
         .hamburger .line {
             width: 25px;
             height: 3px;
@@ -111,7 +115,7 @@
             margin: 5px 0;
             transition: all 0.3s ease;
         }
-        
+
         .hero {
             height: 100vh;
             display: flex;
@@ -120,7 +124,7 @@
             overflow: hidden;
             padding-top: 80px;
         }
-        
+
         #particles-container {
             position: absolute;
             width: 100%;
@@ -129,7 +133,7 @@
             left: 0;
             z-index: 1;
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 2;
@@ -137,24 +141,24 @@
             margin: 0 auto;
             text-align: center;
         }
-        
+
         .hero-title {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 20px;
             color: var(--secondary);
         }
-        
+
         .hero-title span {
             color: var(--primary);
         }
-        
+
         .hero-subtitle {
             font-size: 1.5rem;
             margin-bottom: 40px;
             color: var(--dark-gray);
         }
-        
+
         .cta-button {
             background-color: var(--primary);
             color: white;
@@ -167,28 +171,28 @@
             display: inline-block;
             margin-right: 15px;
         }
-        
+
         .cta-button:hover {
             background-color: #e65c00;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .cta-button.secondary {
             background-color: transparent;
             color: var(--secondary);
             border: 2px solid var(--secondary);
         }
-        
+
         .cta-button.secondary:hover {
             background-color: var(--secondary);
             color: white;
         }
-        
+
         .section {
             padding: 100px 0;
         }
-        
+
         .section-title {
             font-size: 2.5rem;
             font-weight: 700;
@@ -196,7 +200,7 @@
             text-align: center;
             position: relative;
         }
-        
+
         .section-title:after {
             content: '';
             position: absolute;
@@ -207,17 +211,17 @@
             height: 4px;
             background-color: var(--primary);
         }
-        
+
         .benefits {
             background-color: var(--gray);
         }
-        
+
         .benefits-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-        
+
         .benefit-card {
             background-color: white;
             padding: 30px;
@@ -225,39 +229,39 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
-        
+
         .benefit-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
-        
+
         .benefit-icon {
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 20px;
         }
-        
+
         .benefit-title {
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 15px;
         }
-        
+
         .benefit-description {
             color: var(--dark-gray);
             line-height: 1.6;
         }
-        
+
         .services {
             background-color: white;
         }
-        
+
         .services-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-        
+
         .service-card {
             background-color: var(--gray);
             padding: 30px;
@@ -266,12 +270,12 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
-        
+
         .service-card:before {
             content: '';
             position: absolute;
@@ -281,29 +285,29 @@
             top: 0;
             left: 0;
         }
-        
+
         .service-icon {
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 20px;
         }
-        
+
         .service-title {
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 15px;
         }
-        
+
         .service-description {
             color: var(--dark-gray);
             line-height: 1.6;
         }
-        
+
         .chat-demo {
             background-color: var(--gray);
             padding: 100px 0;
         }
-        
+
         .chat-container {
             max-width: 800px;
             margin: 0 auto;
@@ -312,7 +316,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
-        
+
         .chat-header {
             background-color: var(--primary);
             color: white;
@@ -320,7 +324,7 @@
             display: flex;
             align-items: center;
         }
-        
+
         .avatar {
             width: 40px;
             height: 40px;
@@ -331,65 +335,65 @@
             justify-content: center;
             margin-right: 15px;
         }
-        
+
         .avatar i {
             color: var(--primary);
             font-size: 1.3rem;
         }
-        
+
         .chat-name {
             font-weight: 600;
             font-size: 1.2rem;
         }
-        
+
         .chat-body {
             padding: 20px;
             height: 400px;
             overflow-y: auto;
         }
-        
+
         .message {
             margin-bottom: 20px;
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.5s ease;
         }
-        
+
         .message.show {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         .message-content {
             padding: 12px 20px;
             border-radius: 20px;
             display: inline-block;
             max-width: 80%;
         }
-        
+
         .ai .message-content {
             background-color: #f0f0f0;
             border-top-left-radius: 5px;
         }
-        
+
         .user .message-content {
             background-color: var(--primary);
             color: white;
             float: right;
             border-top-right-radius: 5px;
         }
-        
+
         .message-time {
             font-size: 0.8rem;
             color: #999;
             margin-top: 5px;
             display: block;
         }
-        
+
         .user .message-time {
             text-align: right;
         }
-        
+
         .typing-indicator {
             padding: 12px 20px;
             background-color: #f0f0f0;
@@ -399,7 +403,7 @@
             margin-bottom: 20px;
             display: none;
         }
-        
+
         .typing-indicator span {
             height: 8px;
             width: 8px;
@@ -409,75 +413,77 @@
             margin-right: 5px;
             animation: typing 1s infinite ease-in-out;
         }
-        
+
         .typing-indicator span:nth-child(2) {
             animation-delay: 0.2s;
         }
-        
+
         .typing-indicator span:nth-child(3) {
             animation-delay: 0.4s;
             margin-right: 0;
         }
-        
+
         @keyframes typing {
             0% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-5px);
             }
+
             100% {
                 transform: translateY(0);
             }
         }
-        
+
         .technologies {
             background-color: white;
             padding: 100px 0;
         }
-        
+
         .tech-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             text-align: center;
         }
-        
+
         .tech-item {
             padding: 30px;
             background-color: var(--gray);
             border-radius: 10px;
             transition: all 0.3s ease;
         }
-        
+
         .tech-item:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .tech-icon {
             font-size: 3rem;
             color: var(--primary);
             margin-bottom: 20px;
         }
-        
+
         .tech-name {
             font-weight: 600;
             font-size: 1.2rem;
         }
-        
+
         .pricing {
             background-color: var(--gray);
             padding: 100px 0;
         }
-        
+
         .pricing-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
         }
-        
+
         .pricing-plan {
             background-color: white;
             border-radius: 10px;
@@ -489,12 +495,12 @@
             position: relative;
             transition: all 0.3s ease;
         }
-        
+
         .pricing-plan:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
-        
+
         .popular-tag {
             background-color: var(--primary);
             color: white;
@@ -507,40 +513,40 @@
             font-weight: 600;
             font-size: 0.9rem;
         }
-        
+
         .plan-name {
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 15px;
         }
-        
+
         .plan-price {
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--primary);
             margin-bottom: 20px;
         }
-        
+
         .plan-price span {
             font-size: 1rem;
             color: var(--dark-gray);
         }
-        
+
         .plan-features {
             list-style: none;
             margin-bottom: 30px;
         }
-        
+
         .plan-features li {
             padding: 10px 0;
             border-bottom: 1px solid #eee;
         }
-        
+
         .plan-features i {
             color: var(--primary);
             margin-right: 10px;
         }
-        
+
         .plan-button {
             background-color: var(--primary);
             color: white;
@@ -551,26 +557,26 @@
             display: inline-block;
             transition: all 0.3s ease;
         }
-        
+
         .plan-button:hover {
             background-color: #e65c00;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .cta-section {
             background-color: var(--secondary);
             color: white;
             padding: 100px 0;
             text-align: center;
         }
-        
+
         .cta-title {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 20px;
         }
-        
+
         .cta-description {
             font-size: 1.2rem;
             margin-bottom: 40px;
@@ -578,66 +584,66 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .contact {
             background-color: white;
             padding: 100px 0;
         }
-        
+
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 50px;
         }
-        
+
         .contact-info {
             padding-right: 30px;
         }
-        
+
         .contact-title {
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 20px;
         }
-        
+
         .contact-description {
             color: var(--dark-gray);
             line-height: 1.6;
             margin-bottom: 30px;
         }
-        
+
         .contact-details {
             list-style: none;
         }
-        
+
         .contact-details li {
             margin-bottom: 15px;
             display: flex;
             align-items: center;
         }
-        
+
         .contact-details i {
             color: var(--primary);
             font-size: 1.2rem;
             margin-right: 15px;
         }
-        
+
         .contact-form {
             background-color: var(--gray);
             padding: 30px;
             border-radius: 10px;
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
         }
-        
+
         .form-control {
             width: 100%;
             padding: 12px 15px;
@@ -646,18 +652,18 @@
             font-size: 1rem;
             transition: all 0.3s ease;
         }
-        
+
         .form-control:focus {
             border-color: var(--primary);
             outline: none;
             box-shadow: 0 0 0 2px rgba(255, 102, 0, 0.2);
         }
-        
+
         textarea.form-control {
             height: 120px;
             resize: vertical;
         }
-        
+
         .submit-btn {
             background-color: var(--primary);
             color: white;
@@ -669,30 +675,30 @@
             transition: all 0.3s ease;
             font-size: 1rem;
         }
-        
+
         .submit-btn:hover {
             background-color: #e65c00;
         }
-        
+
         .footer {
             background-color: var(--secondary);
             color: white;
             padding: 50px 0 20px;
         }
-        
+
         .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             margin-bottom: 30px;
         }
-        
+
         .footer-col h4 {
             font-size: 1.2rem;
             margin-bottom: 20px;
             position: relative;
         }
-        
+
         .footer-col h4:after {
             content: '';
             position: absolute;
@@ -702,31 +708,31 @@
             height: 2px;
             background-color: var(--primary);
         }
-        
+
         .footer-col ul {
             list-style: none;
         }
-        
+
         .footer-col ul li {
             margin-bottom: 10px;
         }
-        
+
         .footer-col ul a {
             color: #ddd;
             text-decoration: none;
             transition: all 0.3s ease;
         }
-        
+
         .footer-col ul a:hover {
             color: var(--primary);
             padding-left: 5px;
         }
-        
+
         .social-links {
             display: flex;
             margin-top: 20px;
         }
-        
+
         .social-links a {
             display: flex;
             align-items: center;
@@ -740,25 +746,25 @@
             text-decoration: none;
             transition: all 0.3s ease;
         }
-        
+
         .social-links a:hover {
             background-color: var(--primary);
             transform: translateY(-3px);
         }
-        
+
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
             border-top: 1px solid #444;
         }
-        
+
         .lang-selector {
             position: absolute;
             top: 25px;
             right: 100px;
             z-index: 1001;
         }
-        
+
         .lang-selector select {
             padding: 5px 10px;
             border-radius: 5px;
@@ -773,15 +779,15 @@
             .hero-title {
                 font-size: 2.8rem;
             }
-            
+
             .hero-subtitle {
                 font-size: 1.3rem;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
-            
+
             .nav-links {
                 position: fixed;
                 top: 80px;
@@ -794,34 +800,34 @@
                 box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
                 transition: all 0.5s ease;
             }
-            
+
             .nav-links.active {
                 right: 0;
             }
-            
+
             .nav-links li {
                 margin: 15px 0;
             }
-            
+
             .hamburger {
                 display: block;
             }
-            
+
             .lang-selector {
                 top: 15px;
                 right: 80px;
             }
         }
-        
+
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.2rem;
             }
-            
+
             .hero-subtitle {
                 font-size: 1.1rem;
             }
-            
+
             .cta-button {
                 padding: 12px 20px;
                 font-size: 1rem;
@@ -829,38 +835,39 @@
                 margin-bottom: 15px;
                 margin-right: 0;
             }
-            
+
             .section {
                 padding: 60px 0;
             }
-            
+
             .section-title {
                 font-size: 1.8rem;
             }
-            
+
             .pricing-plan {
                 padding: 30px;
             }
-            
+
             .chat-body {
                 height: 300px;
             }
-            
+
             .contact-container {
                 grid-template-columns: 1fr;
             }
-            
+
             .contact-info {
                 padding-right: 0;
                 text-align: center;
             }
-            
+
             .contact-details li {
                 justify-content: center;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Language Selector -->
     <div class="lang-selector">
@@ -869,7 +876,7 @@
             <option value="en">English</option>
         </select>
     </div>
-    
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container navbar-container">
@@ -880,7 +887,8 @@
                 <li><a href="#inicio" class="lang" data-es="Inicio" data-en="Home">Inicio</a></li>
                 <li><a href="#beneficios" class="lang" data-es="Beneficios" data-en="Benefits">Beneficios</a></li>
                 <li><a href="#servicios" class="lang" data-es="Servicios" data-en="Services">Servicios</a></li>
-                <li><a href="#tecnologias" class="lang" data-es="Tecnologías" data-en="Technologies">Tecnologías</a></li>
+                <li><a href="#tecnologias" class="lang" data-es="Tecnologías" data-en="Technologies">Tecnologías</a>
+                </li>
                 <li><a href="#planes" class="lang" data-es="Planes" data-en="Plans">Planes</a></li>
                 <li><a href="#contacto" class="contact-btn lang" data-es="Contacto" data-en="Contact">Contacto</a></li>
             </ul>
@@ -891,59 +899,96 @@
             </div>
         </div>
     </nav>
-    
+
     <!-- Hero Section -->
     <section class="hero" id="inicio">
         <div id="particles-container"></div>
         <div class="container hero-content">
-            <h1 class="hero-title lang" data-es="Soluciones de <span>Automatización</span> Inteligente para tu Negocio" data-en="Intelligent <span>Automation</span> Solutions for your Business">Soluciones de <span>Automatización</span> Inteligente para tu Negocio</h1>
-            <p class="hero-subtitle lang" data-es="Optimiza tus operaciones con agentes de IA personalizados y potentes automatizaciones" data-en="Optimize your operations with custom AI agents and powerful automations">Optimiza tus operaciones con agentes de IA personalizados y potentes automatizaciones</p>
+            <h1 class="hero-title lang" data-es="Soluciones de <span>Automatización</span> Inteligente para tu Negocio"
+                data-en="Intelligent <span>Automation</span> Solutions for your Business">Soluciones de
+                <span>Automatización</span> Inteligente para tu Negocio</h1>
+            <p class="hero-subtitle lang"
+                data-es="Optimiza tus operaciones con agentes de IA personalizados y potentes automatizaciones"
+                data-en="Optimize your operations with custom AI agents and powerful automations">Optimiza tus
+                operaciones con agentes de IA personalizados y potentes automatizaciones</p>
             <div>
-                <a href="#contacto" class="cta-button lang" data-es="Empieza Ahora" data-en="Start Now">Empieza Ahora</a>
-                <a href="#servicios" class="cta-button secondary lang" data-es="Conoce Más" data-en="Learn More">Conoce Más</a>
+                <a href="#contacto" class="cta-button lang" data-es="Empieza Ahora" data-en="Start Now">Empieza
+                    Ahora</a>
+                <a href="#servicios" class="cta-button secondary lang" data-es="Conoce Más" data-en="Learn More">Conoce
+                    Más</a>
             </div>
         </div>
     </section>
-    
+
     <!-- Benefits Section -->
     <section class="section benefits" id="beneficios">
         <div class="container">
-            <h2 class="section-title lang" data-es="Beneficios de Nuestras Soluciones" data-en="Benefits of Our Solutions">Beneficios de Nuestras Soluciones</h2>
+            <h2 class="section-title lang" data-es="Beneficios de Nuestras Soluciones"
+                data-en="Benefits of Our Solutions">Beneficios de Nuestras Soluciones</h2>
             <div class="benefits-container">
                 <div class="benefit-card">
                     <i class="fas fa-clock benefit-icon"></i>
-                    <h3 class="benefit-title lang" data-es="Ahorro de Tiempo" data-en="Time Saving">Ahorro de Tiempo</h3>
-                    <p class="benefit-description lang" data-es="Reduce hasta un 75% el tiempo dedicado a tareas repetitivas, liberando a tu equipo para enfocarse en actividades de mayor valor." data-en="Reduce time spent on repetitive tasks by up to 75%, freeing your team to focus on higher-value activities.">Reduce hasta un 75% el tiempo dedicado a tareas repetitivas, liberando a tu equipo para enfocarse en actividades de mayor valor.</p>
+                    <h3 class="benefit-title lang" data-es="Ahorro de Tiempo" data-en="Time Saving">Ahorro de Tiempo
+                    </h3>
+                    <p class="benefit-description lang"
+                        data-es="Reduce hasta un 75% el tiempo dedicado a tareas repetitivas, liberando a tu equipo para enfocarse en actividades de mayor valor."
+                        data-en="Reduce time spent on repetitive tasks by up to 75%, freeing your team to focus on higher-value activities.">
+                        Reduce hasta un 75% el tiempo dedicado a tareas repetitivas, liberando a tu equipo para
+                        enfocarse en actividades de mayor valor.</p>
                 </div>
                 <div class="benefit-card">
                     <i class="fas fa-dollar-sign benefit-icon"></i>
-                    <h3 class="benefit-title lang" data-es="Reducción de Costos" data-en="Cost Reduction">Reducción de Costos</h3>
-                    <p class="benefit-description lang" data-es="Ahorra hasta un 40% en costos operativos al automatizar procesos que normalmente requerirían múltiples recursos humanos." data-en="Save up to 40% on operational costs by automating processes that would normally require multiple human resources.">Ahorra hasta un 40% en costos operativos al automatizar procesos que normalmente requerirían múltiples recursos humanos.</p>
+                    <h3 class="benefit-title lang" data-es="Reducción de Costos" data-en="Cost Reduction">Reducción de
+                        Costos</h3>
+                    <p class="benefit-description lang"
+                        data-es="Ahorra hasta un 40% en costos operativos al automatizar procesos que normalmente requerirían múltiples recursos humanos."
+                        data-en="Save up to 40% on operational costs by automating processes that would normally require multiple human resources.">
+                        Ahorra hasta un 40% en costos operativos al automatizar procesos que normalmente requerirían
+                        múltiples recursos humanos.</p>
                 </div>
                 <div class="benefit-card">
                     <i class="fas fa-chart-line benefit-icon"></i>
-                    <h3 class="benefit-title lang" data-es="Aumento de Productividad" data-en="Productivity Increase">Aumento de Productividad</h3>
-                    <p class="benefit-description lang" data-es="Incrementa la productividad en un 60% con sistemas que funcionan 24/7 sin interrupciones, errores ni tiempo de descanso." data-en="Increase productivity by 60% with systems that work 24/7 without interruptions, errors, or downtime.">Incrementa la productividad en un 60% con sistemas que funcionan 24/7 sin interrupciones, errores ni tiempo de descanso.</p>
+                    <h3 class="benefit-title lang" data-es="Aumento de Productividad" data-en="Productivity Increase">
+                        Aumento de Productividad</h3>
+                    <p class="benefit-description lang"
+                        data-es="Incrementa la productividad en un 60% con sistemas que funcionan 24/7 sin interrupciones, errores ni tiempo de descanso."
+                        data-en="Increase productivity by 60% with systems that work 24/7 without interruptions, errors, or downtime.">
+                        Incrementa la productividad en un 60% con sistemas que funcionan 24/7 sin interrupciones,
+                        errores ni tiempo de descanso.</p>
                 </div>
                 <div class="benefit-card">
                     <i class="fas fa-smile benefit-icon"></i>
-                    <h3 class="benefit-title lang" data-es="Mejor Experiencia del Cliente" data-en="Better Customer Experience">Mejor Experiencia del Cliente</h3>
-                    <p class="benefit-description lang" data-es="Mejora la satisfacción del cliente en un 35% con respuestas inmediatas, personalizadas y consistentes a todas sus consultas." data-en="Improve customer satisfaction by 35% with immediate, personalized, and consistent responses to all inquiries.">Mejora la satisfacción del cliente en un 35% con respuestas inmediatas, personalizadas y consistentes a todas sus consultas.</p>
+                    <h3 class="benefit-title lang" data-es="Mejor Experiencia del Cliente"
+                        data-en="Better Customer Experience">Mejor Experiencia del Cliente</h3>
+                    <p class="benefit-description lang"
+                        data-es="Mejora la satisfacción del cliente en un 35% con respuestas inmediatas, personalizadas y consistentes a todas sus consultas."
+                        data-en="Improve customer satisfaction by 35% with immediate, personalized, and consistent responses to all inquiries.">
+                        Mejora la satisfacción del cliente en un 35% con respuestas inmediatas, personalizadas y
+                        consistentes a todas sus consultas.</p>
                 </div>
                 <div class="benefit-card">
                     <i class="fas fa-database benefit-icon"></i>
-                    <h3 class="benefit-title lang" data-es="Análisis de Datos" data-en="Data Analysis">Análisis de Datos</h3>
-                    <p class="benefit-description lang" data-es="Obtén insights valiosos de tus datos con análisis avanzados que te permiten tomar mejores decisiones basadas en información real." data-en="Gain valuable insights from your data with advanced analytics that help you make better decisions based on real information.">Obtén insights valiosos de tus datos con análisis avanzados que te permiten tomar mejores decisiones basadas en información real.</p>
+                    <h3 class="benefit-title lang" data-es="Análisis de Datos" data-en="Data Analysis">Análisis de Datos
+                    </h3>
+                    <p class="benefit-description lang"
+                        data-es="Obtén insights valiosos de tus datos con análisis avanzados que te permiten tomar mejores decisiones basadas en información real."
+                        data-en="Gain valuable insights from your data with advanced analytics that help you make better decisions based on real information.">
+                        Obtén insights valiosos de tus datos con análisis avanzados que te permiten tomar mejores
+                        decisiones basadas en información real.</p>
                 </div>
                 <div class="benefit-card">
                     <i class="fas fa-expand-arrows-alt benefit-icon"></i>
                     <h3 class="benefit-title lang" data-es="Escalabilidad" data-en="Scalability">Escalabilidad</h3>
-                    <p class="benefit-description lang" data-es="Escala tus operaciones sin aumentar proporcionalmente tus costos. Nuestras soluciones crecen con tu negocio." data-en="Scale your operations without proportionally increasing your costs. Our solutions grow with your business.">Escala tus operaciones sin aumentar proporcionalmente tus costos. Nuestras soluciones crecen con tu negocio.</p>
+                    <p class="benefit-description lang"
+                        data-es="Escala tus operaciones sin aumentar proporcionalmente tus costos. Nuestras soluciones crecen con tu negocio."
+                        data-en="Scale your operations without proportionally increasing your costs. Our solutions grow with your business.">
+                        Escala tus operaciones sin aumentar proporcionalmente tus costos. Nuestras soluciones crecen con
+                        tu negocio.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Services Section -->
     <section class="section services" id="servicios">
         <div class="container">
@@ -951,48 +996,80 @@
             <div class="services-container">
                 <div class="service-card">
                     <i class="fas fa-robot service-icon"></i>
-                    <h3 class="service-title lang" data-es="Agentes IA Personalizados" data-en="Custom AI Agents">Agentes IA Personalizados</h3>
-                    <p class="service-description lang" data-es="Desarrollamos agentes de inteligencia artificial adaptados específicamente a las necesidades de tu negocio, capaces de entender y resolver consultas complejas de forma natural." data-en="We develop artificial intelligence agents specifically tailored to your business needs, capable of understanding and solving complex queries naturally.">Desarrollamos agentes de inteligencia artificial adaptados específicamente a las necesidades de tu negocio, capaces de entender y resolver consultas complejas de forma natural.</p>
+                    <h3 class="service-title lang" data-es="Agentes IA Personalizados" data-en="Custom AI Agents">
+                        Agentes IA Personalizados</h3>
+                    <p class="service-description lang"
+                        data-es="Desarrollamos agentes de inteligencia artificial adaptados específicamente a las necesidades de tu negocio, capaces de entender y resolver consultas complejas de forma natural."
+                        data-en="We develop artificial intelligence agents specifically tailored to your business needs, capable of understanding and solving complex queries naturally.">
+                        Desarrollamos agentes de inteligencia artificial adaptados específicamente a las necesidades de
+                        tu negocio, capaces de entender y resolver consultas complejas de forma natural.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-headset service-icon"></i>
-                    <h3 class="service-title lang" data-es="Automatización de Atención al Cliente" data-en="Customer Service Automation">Automatización de Atención al Cliente</h3>
-                    <p class="service-description lang" data-es="Optimiza la experiencia de tus clientes con asistentes virtuales que atienden consultas, resuelven problemas y escalan casos complejos, disponibles 24/7 en múltiples canales." data-en="Optimize your customers' experience with virtual assistants that handle inquiries, solve problems and escalate complex cases, available 24/7 across multiple channels.">Optimiza la experiencia de tus clientes con asistentes virtuales que atienden consultas, resuelven problemas y escalan casos complejos, disponibles 24/7 en múltiples canales.</p>
+                    <h3 class="service-title lang" data-es="Automatización de Atención al Cliente"
+                        data-en="Customer Service Automation">Automatización de Atención al Cliente</h3>
+                    <p class="service-description lang"
+                        data-es="Optimiza la experiencia de tus clientes con asistentes virtuales que atienden consultas, resuelven problemas y escalan casos complejos, disponibles 24/7 en múltiples canales."
+                        data-en="Optimize your customers' experience with virtual assistants that handle inquiries, solve problems and escalate complex cases, available 24/7 across multiple channels.">
+                        Optimiza la experiencia de tus clientes con asistentes virtuales que atienden consultas,
+                        resuelven problemas y escalan casos complejos, disponibles 24/7 en múltiples canales.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-cogs service-icon"></i>
-                    <h3 class="service-title lang" data-es="Automatización de Procesos" data-en="Process Automation">Automatización de Procesos</h3>
-                    <p class="service-description lang" data-es="Identifica y automatiza procesos repetitivos en tu empresa, reduciendo errores, acelerando la ejecución y liberando recursos humanos para tareas de mayor valor." data-en="Identify and automate repetitive processes in your company, reducing errors, accelerating execution and freeing up human resources for higher-value tasks.">Identifica y automatiza procesos repetitivos en tu empresa, reduciendo errores, acelerando la ejecución y liberando recursos humanos para tareas de mayor valor.</p>
+                    <h3 class="service-title lang" data-es="Automatización de Procesos" data-en="Process Automation">
+                        Automatización de Procesos</h3>
+                    <p class="service-description lang"
+                        data-es="Identifica y automatiza procesos repetitivos en tu empresa, reduciendo errores, acelerando la ejecución y liberando recursos humanos para tareas de mayor valor."
+                        data-en="Identify and automate repetitive processes in your company, reducing errors, accelerating execution and freeing up human resources for higher-value tasks.">
+                        Identifica y automatiza procesos repetitivos en tu empresa, reduciendo errores, acelerando la
+                        ejecución y liberando recursos humanos para tareas de mayor valor.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-chart-pie service-icon"></i>
-                    <h3 class="service-title lang" data-es="Análisis Predictivo" data-en="Predictive Analysis">Análisis Predictivo</h3>
-                    <p class="service-description lang" data-es="Aprovecha el poder de tus datos con modelos de IA que identifican patrones, predicen comportamientos y generan recomendaciones para optimizar tu negocio." data-en="Harness the power of your data with AI models that identify patterns, predict behaviors and generate recommendations to optimize your business.">Aprovecha el poder de tus datos con modelos de IA que identifican patrones, predicen comportamientos y generan recomendaciones para optimizar tu negocio.</p>
+                    <h3 class="service-title lang" data-es="Análisis Predictivo" data-en="Predictive Analysis">Análisis
+                        Predictivo</h3>
+                    <p class="service-description lang"
+                        data-es="Aprovecha el poder de tus datos con modelos de IA que identifican patrones, predicen comportamientos y generan recomendaciones para optimizar tu negocio."
+                        data-en="Harness the power of your data with AI models that identify patterns, predict behaviors and generate recommendations to optimize your business.">
+                        Aprovecha el poder de tus datos con modelos de IA que identifican patrones, predicen
+                        comportamientos y generan recomendaciones para optimizar tu negocio.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-calendar-check service-icon"></i>
-                    <h3 class="service-title lang" data-es="Integración con Plataformas" data-en="Platform Integration">Integración con Plataformas</h3>
-                    <p class="service-description lang" data-es="Conectamos nuestras soluciones con WhatsApp, Google Calendar, CRMs y otras herramientas que ya utilizas, creando un ecosistema tecnológico fluido y eficiente." data-en="We connect our solutions with WhatsApp, Google Calendar, CRMs and other tools you already use, creating a fluid and efficient technological ecosystem.">Conectamos nuestras soluciones con WhatsApp, Google Calendar, CRMs y otras herramientas que ya utilizas, creando un ecosistema tecnológico fluido y eficiente.</p>
+                    <h3 class="service-title lang" data-es="Integración con Plataformas" data-en="Platform Integration">
+                        Integración con Plataformas</h3>
+                    <p class="service-description lang"
+                        data-es="Conectamos nuestras soluciones con WhatsApp, Google Calendar, CRMs y otras herramientas que ya utilizas, creando un ecosistema tecnológico fluido y eficiente."
+                        data-en="We connect our solutions with WhatsApp, Google Calendar, CRMs and other tools you already use, creating a fluid and efficient technological ecosystem.">
+                        Conectamos nuestras soluciones con WhatsApp, Google Calendar, CRMs y otras herramientas que ya
+                        utilizas, creando un ecosistema tecnológico fluido y eficiente.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-database service-icon"></i>
-                    <h3 class="service-title lang" data-es="Gestión Inteligente de Datos" data-en="Intelligent Data Management">Gestión Inteligente de Datos</h3>
-                    <p class="service-description lang" data-es="Organiza, procesa y extrae valor de tus bases de datos con sistemas inteligentes que transforman información desestructurada en conocimiento accionable." data-en="Organize, process and extract value from your databases with intelligent systems that transform unstructured information into actionable knowledge.">Organiza, procesa y extrae valor de tus bases de datos con sistemas inteligentes que transforman información desestructurada en conocimiento accionable.</p>
+                    <h3 class="service-title lang" data-es="Gestión Inteligente de Datos"
+                        data-en="Intelligent Data Management">Gestión Inteligente de Datos</h3>
+                    <p class="service-description lang"
+                        data-es="Organiza, procesa y extrae valor de tus bases de datos con sistemas inteligentes que transforman información desestructurada en conocimiento accionable."
+                        data-en="Organize, process and extract value from your databases with intelligent systems that transform unstructured information into actionable knowledge.">
+                        Organiza, procesa y extrae valor de tus bases de datos con sistemas inteligentes que transforman
+                        información desestructurada en conocimiento accionable.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Chat Demo Section -->
     <section class="section chat-demo" id="demo">
         <div class="container">
-            <h2 class="section-title lang" data-es="Descubre cómo funciona el Asistente Converse" data-en="Discover how the Converse Assistant works">Descubre cómo funciona el Asistente Converse</h2>
+            <h2 class="section-title lang" data-es="Descubre cómo funciona el Asistente Converse"
+                data-en="Discover how the Converse Assistant works">Descubre cómo funciona el Asistente Converse</h2>
             <div class="chat-container">
                 <div class="chat-header">
                     <div class="avatar">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <div class="chat-name lang" data-es="Asistente Converse" data-en="Converse Assistant">Asistente Converse</div>
+                    <div class="chat-name lang" data-es="Asistente Converse" data-en="Converse Assistant">Asistente
+                        Converse</div>
                 </div>
                 <div class="chat-body" id="chat-body">
                     <div class="typing-indicator" id="typing-indicator">
@@ -1004,19 +1081,22 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Technologies Section -->
     <section class="section technologies" id="tecnologias">
         <div class="container">
-            <h2 class="section-title lang" data-es="Nuestras Tecnologías" data-en="Our Technologies">Nuestras Tecnologías</h2>
+            <h2 class="section-title lang" data-es="Nuestras Tecnologías" data-en="Our Technologies">Nuestras
+                Tecnologías</h2>
             <div class="tech-container">
                 <div class="tech-item">
                     <i class="fas fa-brain tech-icon"></i>
-                    <h3 class="tech-name lang" data-es="Inteligencia Artificial" data-en="Artificial Intelligence">Inteligencia Artificial</h3>
+                    <h3 class="tech-name lang" data-es="Inteligencia Artificial" data-en="Artificial Intelligence">
+                        Inteligencia Artificial</h3>
                 </div>
                 <div class="tech-item">
                     <i class="fas fa-comment-dots tech-icon"></i>
-                    <h3 class="tech-name lang" data-es="NLP (Procesamiento de Lenguaje Natural)" data-en="NLP (Natural Language Processing)">NLP (Procesamiento de Lenguaje Natural)</h3>
+                    <h3 class="tech-name lang" data-es="NLP (Procesamiento de Lenguaje Natural)"
+                        data-en="NLP (Natural Language Processing)">NLP (Procesamiento de Lenguaje Natural)</h3>
                 </div>
                 <div class="tech-item">
                     <i class="fas fa-network-wired tech-icon"></i>
@@ -1024,11 +1104,13 @@
                 </div>
                 <div class="tech-item">
                     <i class="fas fa-robot tech-icon"></i>
-                    <h3 class="tech-name lang" data-es="Aprendizaje Automático" data-en="Machine Learning">Aprendizaje Automático</h3>
+                    <h3 class="tech-name lang" data-es="Aprendizaje Automático" data-en="Machine Learning">Aprendizaje
+                        Automático</h3>
                 </div>
                 <div class="tech-item">
                     <i class="fas fa-cloud tech-icon"></i>
-                    <h3 class="tech-name lang" data-es="Procesamiento en la Nube" data-en="Cloud Processing">Procesamiento en la Nube</h3>
+                    <h3 class="tech-name lang" data-es="Procesamiento en la Nube" data-en="Cloud Processing">
+                        Procesamiento en la Nube</h3>
                 </div>
                 <div class="tech-item">
                     <i class="fas fa-plug tech-icon"></i>
@@ -1037,7 +1119,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Pricing Section -->
     <section class="section pricing" id="planes">
         <div class="container">
@@ -1047,11 +1129,18 @@
                     <h3 class="plan-name lang" data-es="Básico" data-en="Basic">Básico</h3>
                     <div class="plan-price">$399<span>/mes</span></div>
                     <ul class="plan-features">
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="1 Agente de IA" data-en="1 AI Agent">1 Agente de IA</span></li>
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="2 Interacciones (WhatsApp, Calendar)" data-en="2 Interactions (WhatsApp, Calendar)">2 Interacciones (WhatsApp, Calendar)</span></li>
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Integración con bases de datos" data-en="Database integration">Integración con bases de datos</span></li>
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Soporte básico" data-en="Basic support">Soporte básico</span></li>
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Actualizaciones mensuales" data-en="Monthly updates">Actualizaciones mensuales</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="1 Agente de IA"
+                                data-en="1 AI Agent">1 Agente de IA</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang"
+                                data-es="2 Interacciones (WhatsApp, Calendar)"
+                                data-en="2 Interactions (WhatsApp, Calendar)">2 Interacciones (WhatsApp,
+                                Calendar)</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Integración con bases de datos"
+                                data-en="Database integration">Integración con bases de datos</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Soporte básico"
+                                data-en="Basic support">Soporte básico</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Actualizaciones mensuales"
+                                data-en="Monthly updates">Actualizaciones mensuales</span></li>
                     </ul>
                     <a href="#contacto" class="plan-button lang" data-es="Comprar" data-en="Buy">Comprar</a>
                 </div>
@@ -1060,12 +1149,18 @@
                     <h3 class="plan-name lang" data-es="Profesional" data-en="Professional">Profesional</h3>
                     <div class="plan-price">$599<span>/mes</span></div>
                     <ul class="plan-features">
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="2 Agentes de IA" data-en="2 AI Agents">2 Agentes de IA</span></li>
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="3 Interacciones en total" data-en="3 Total interactions">3 Interacciones en total</span></li>
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Integraciones con CRM" data-en="CRM integrations">Integraciones con CRM</span></li>
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Soporte prioritario" data-en="Priority support">Soporte prioritario</span></li>
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Análisis de datos" data-en="Data analysis">Análisis de datos</span></li>
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Todo lo del plan Básico" data-en="Everything in Basic plan">Todo lo del plan Básico</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="2 Agentes de IA"
+                                data-en="2 AI Agents">2 Agentes de IA</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="3 Interacciones en total"
+                                data-en="3 Total interactions">3 Interacciones en total</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Integraciones con CRM"
+                                data-en="CRM integrations">Integraciones con CRM</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Soporte prioritario"
+                                data-en="Priority support">Soporte prioritario</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Análisis de datos"
+                                data-en="Data analysis">Análisis de datos</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Todo lo del plan Básico"
+                                data-en="Everything in Basic plan">Todo lo del plan Básico</span></li>
                     </ul>
                     <a href="#contacto" class="plan-button lang" data-es="Comprar" data-en="Buy">Comprar</a>
                 </div>
@@ -1073,25 +1168,39 @@
                     <h3 class="plan-name lang" data-es="Enterprise" data-en="Enterprise">Enterprise</h3>
                     <div class="plan-price lang" data-es="Personalizado" data-en="Custom">Personalizado</div>
                     <ul class="plan-features">
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Agentes ilimitados/necesarios" data-en="Unlimited/necessary agents">Agentes ilimitados/necesarios</span></li>
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Interacciones ilimitadas/necesarias" data-en="Unlimited/necessary interactions">Interacciones ilimitadas/necesarias</span></li>
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Integraciones personalizadas" data-en="Custom integrations">Integraciones personalizadas</span></li>
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Soporte dedicado 24/7" data-en="Dedicated 24/7 support">Soporte dedicado 24/7</span></li>
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Desarrollo a medida" data-en="Custom development">Desarrollo a medida</span></li>
-                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Todo lo de los planes anteriores" data-en="Everything from previous plans">Todo lo de los planes anteriores</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Agentes ilimitados/necesarios"
+                                data-en="Unlimited/necessary agents">Agentes ilimitados/necesarios</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang"
+                                data-es="Interacciones ilimitadas/necesarias"
+                                data-en="Unlimited/necessary interactions">Interacciones ilimitadas/necesarias</span>
+                        </li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Integraciones personalizadas"
+                                data-en="Custom integrations">Integraciones personalizadas</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Soporte dedicado 24/7"
+                                data-en="Dedicated 24/7 support">Soporte dedicado 24/7</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Desarrollo a medida"
+                                data-en="Custom development">Desarrollo a medida</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang" data-es="Todo lo de los planes anteriores"
+                                data-en="Everything from previous plans">Todo lo de los planes anteriores</span></li>
                     </ul>
                     <a href="#contacto" class="plan-button lang" data-es="Comprar" data-en="Buy">Comprar</a>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Call to Action Section -->
     <section class="cta-section">
         <div class="container">
-            <h2 class="cta-title lang" data-es="Listos para Transformar tu Negocio" data-en="Ready to Transform Your Business">Listos para Transformar tu Negocio</h2>
-            <p class="cta-description lang" data-es="Descubre cómo Code Verse AI puede ayudarte a optimizar tus operaciones, reducir costos y mejorar la experiencia de tus clientes" data-en="Discover how Code Verse AI can help you optimize operations, reduce costs and improve your customers' experience">Descubre cómo Code Verse AI puede ayudarte a optimizar tus operaciones, reducir costos y mejorar la experiencia de tus clientes</p>
-            <a href=https://codeverseai.fillout.com/code-verse-ai-descubrimiento class="cta-button lang" data-es="Solicitar Demostración" data-en="Request Demo">Solicitar Demostración</a>
+            <h2 class="cta-title lang" data-es="Listos para Transformar tu Negocio"
+                data-en="Ready to Transform Your Business">Listos para Transformar tu Negocio</h2>
+            <p class="cta-description lang"
+                data-es="Descubre cómo Code Verse AI puede ayudarte a optimizar tus operaciones, reducir costos y mejorar la experiencia de tus clientes"
+                data-en="Discover how Code Verse AI can help you optimize operations, reduce costs and improve your customers' experience">
+                Descubre cómo Code Verse AI puede ayudarte a optimizar tus operaciones, reducir costos y mejorar la
+                experiencia de tus clientes</p>
+            <a href=https://codeverseai.fillout.com/code-verse-ai-descubrimiento class="cta-button lang"
+                data-es="Solicitar Demostración" data-en="Request Demo">Solicitar Demostración</a>
         </div>
     </section>
 
@@ -1099,11 +1208,17 @@
     <!-- Contact Section -->
     <section class="section contact" id="contacto">
         <div class="container">
-            <h2 class="section-title lang" data-es="Contacta con Nosotros" data-en="Contact Us">Contacta con Nosotros</h2>
+            <h2 class="section-title lang" data-es="Contacta con Nosotros" data-en="Contact Us">Contacta con Nosotros
+            </h2>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3 class="contact-title lang" data-es="¿Tienes preguntas? Estamos aquí para ayudarte" data-en="Have questions? We're here to help">¿Tienes preguntas? Estamos aquí para ayudarte</h3>
-                    <p class="contact-description lang" data-es="Ponte en contacto con nuestro equipo para obtener más información sobre nuestras soluciones de automatización inteligente y cómo pueden beneficiar a tu empresa." data-en="Get in touch with our team to learn more about our intelligent automation solutions and how they can benefit your business.">Ponte en contacto con nuestro equipo para obtener más información sobre nuestras soluciones de automatización inteligente y cómo pueden beneficiar a tu empresa.</p>
+                    <h3 class="contact-title lang" data-es="¿Tienes preguntas? Estamos aquí para ayudarte"
+                        data-en="Have questions? We're here to help">¿Tienes preguntas? Estamos aquí para ayudarte</h3>
+                    <p class="contact-description lang"
+                        data-es="Ponte en contacto con nuestro equipo para obtener más información sobre nuestras soluciones de automatización inteligente y cómo pueden beneficiar a tu empresa."
+                        data-en="Get in touch with our team to learn more about our intelligent automation solutions and how they can benefit your business.">
+                        Ponte en contacto con nuestro equipo para obtener más información sobre nuestras soluciones de
+                        automatización inteligente y cómo pueden beneficiar a tu empresa.</p>
                     <ul class="contact-details">
                         <li>
                             <i class="fas fa-phone"></i>
@@ -1115,39 +1230,47 @@
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>1234 Tech Avenue, Silicon Valley, CA</span>
+                            <span>1234 CA</span>
                         </li>
                     </ul>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formsubmit.co/info@codeverse.ai" method="POST">
                         <div class="form-group">
                             <label for="name" class="lang" data-es="Nombre" data-en="Name">Nombre</label>
-                            <input type="text" id="name" class="form-control" required>
+                            <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="email" class="lang" data-es="Email" data-en="Email">Email</label>
-                            <input type="email" id="email" class="form-control" required>
+                            <input type="email" id="email" name="email" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="company" class="lang" data-es="Empresa" data-en="Company">Empresa</label>
-                            <input type="text" id="company" class="form-control">
+                            <input type="text" id="company" name="company" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="phone" class="lang" data-es="Número de contacto" data-en="Contact number">Número de contacto</label>
-                            <input type="tel" id="phone" class="form-control">
+                            <label for="phone" class="lang" data-es="Número de contacto" data-en="Contact number">Número
+                                de contacto</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="message" class="lang" data-es="Mensaje" data-en="Message">Mensaje</label>
-                            <textarea id="message" class="form-control" placeholder="¿Cuál es tu interés o qué necesidades quieres que una Inteligencia Artificial cumpla? Describe brevemente lo que esperas o necesitas." required></textarea>
+                            <textarea id="message" name="message" class="form-control"
+                                placeholder="¿Cuál es tu interés o qué necesidades quieres que una Inteligencia Artificial cumpla? Describe brevemente lo que esperas o necesitas."
+                                required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn lang" data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</button>
+                        <button type="submit" class="submit-btn lang" data-es="Enviar mensaje"
+                            data-en="Send message">Enviar mensaje</button>
+                        <!-- Opcional: Redirección y sin captcha -->
+                        <input type="hidden" name="_next" value="https://codeverse.ai/gracias.html">
+                        <input type="hidden" name="_captcha" value="false">
                     </form>
+                    <div id="formMessage" style="display:none; margin-top:20px;"></div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -1165,16 +1288,21 @@
                     <h4 class="lang" data-es="Servicios" data-en="Services">Servicios</h4>
                     <ul>
                         <li><a href="#" class="lang" data-es="Agentes IA" data-en="AI Agents">Agentes IA</a></li>
-                        <li><a href="#" class="lang" data-es="Automatización" data-en="Automation">Automatización</a></li>
-                        <li><a href="#" class="lang" data-es="Análisis Predictivo" data-en="Predictive Analysis">Análisis Predictivo</a></li>
-                        <li><a href="#" class="lang" data-es="Integraciones" data-en="Integrations">Integraciones</a></li>
+                        <li><a href="#" class="lang" data-es="Automatización" data-en="Automation">Automatización</a>
+                        </li>
+                        <li><a href="#" class="lang" data-es="Análisis Predictivo"
+                                data-en="Predictive Analysis">Análisis Predictivo</a></li>
+                        <li><a href="#" class="lang" data-es="Integraciones" data-en="Integrations">Integraciones</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4 class="lang" data-es="Soporte" data-en="Support">Soporte</h4>
                     <ul>
-                        <li><a href="#" class="lang" data-es="Centro de Ayuda" data-en="Help Center">Centro de Ayuda</a></li>
-                        <li><a href="#" class="lang" data-es="Documentación" data-en="Documentation">Documentación</a></li>
+                        <li><a href="#" class="lang" data-es="Centro de Ayuda" data-en="Help Center">Centro de Ayuda</a>
+                        </li>
+                        <li><a href="#" class="lang" data-es="Documentación" data-en="Documentation">Documentación</a>
+                        </li>
                         <li><a href="#" class="lang" data-es="FAQs" data-en="FAQs">FAQs</a></li>
                         <li><a href="#" class="lang" data-es="Contacto" data-en="Contact">Contacto</a></li>
                     </ul>
@@ -1190,14 +1318,15 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Code Verse AI. <span class="lang" data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span></p>
+                <p>&copy; 2023 Code Verse AI. <span class="lang" data-es="Todos los derechos reservados."
+                        data-en="All rights reserved.">Todos los derechos reservados.</span></p>
             </div>
         </div>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Particles.js configuration
             particlesJS('particles-container', {
                 "particles": {
@@ -1304,20 +1433,20 @@
                 },
                 "retina_detect": true
             });
-            
+
             // Mobile menu toggle
             const hamburger = document.querySelector('.hamburger');
             const navLinks = document.querySelector('.nav-links');
-            
-            hamburger.addEventListener('click', function() {
+
+            hamburger.addEventListener('click', function () {
                 navLinks.classList.toggle('active');
                 hamburger.classList.toggle('active');
             });
-            
+
             // Chat simulation
             const chatBody = document.getElementById('chat-body');
             const typingIndicator = document.getElementById('typing-indicator');
-            
+
             const conversation = [
                 {
                     sender: 'ai',
@@ -1365,73 +1494,73 @@
                     delay: 5000
                 }
             ];
-            
+
             function showTypingIndicator() {
                 typingIndicator.style.display = 'inline-block';
                 chatBody.scrollTop = chatBody.scrollHeight;
             }
-            
+
             function hideTypingIndicator() {
                 typingIndicator.style.display = 'none';
             }
-            
+
             function addMessage(sender, messageText) {
                 const messageDiv = document.createElement('div');
                 messageDiv.className = `message ${sender}`;
-                
+
                 const messageContent = document.createElement('div');
                 messageContent.className = 'message-content';
                 messageContent.textContent = messageText;
-                
+
                 const timeElement = document.createElement('span');
                 timeElement.className = 'message-time';
                 const now = new Date();
                 timeElement.textContent = `${now.getHours()}:${now.getMinutes().toString().padStart(2, '0')}`;
-                
+
                 messageDiv.appendChild(messageContent);
                 messageDiv.appendChild(timeElement);
                 chatBody.insertBefore(messageDiv, typingIndicator);
-                
+
                 setTimeout(() => {
                     messageDiv.classList.add('show');
                     chatBody.scrollTop = chatBody.scrollHeight;
                 }, 100);
             }
-            
+
             function playConversation() {
                 let currentIndex = 0;
-                
+
                 function playNextMessage() {
                     if (currentIndex >= conversation.length) {
                         return;
                     }
-                    
+
                     const message = conversation[currentIndex];
                     currentIndex++;
-                    
+
                     if (message.sender === 'ai') {
                         showTypingIndicator();
                         setTimeout(() => {
                             hideTypingIndicator();
                             addMessage(message.sender, message.message);
-                            
+
                             if (currentIndex < conversation.length) {
                                 setTimeout(playNextMessage, message.delay);
                             }
                         }, 2500); // Typing time for AI
                     } else {
                         addMessage(message.sender, message.message);
-                        
+
                         if (currentIndex < conversation.length) {
                             setTimeout(playNextMessage, message.delay);
                         }
                     }
                 }
-                
+
                 // Start the conversation
                 playNextMessage();
             }
-            
+
             // Check if element is in viewport
             function isInViewport(element) {
                 const rect = element.getBoundingClientRect();
@@ -1442,56 +1571,56 @@
                     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
                 );
             }
-            
+
             // Start conversation when the chat demo section is in viewport
             let chatStarted = false;
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 if (!chatStarted && isInViewport(document.querySelector('.chat-container'))) {
                     chatStarted = true;
                     playConversation();
                 }
             });
-            
+
             // Language selector
             const languageSelect = document.getElementById('language-select');
             const langElements = document.querySelectorAll('.lang');
-            
-            languageSelect.addEventListener('change', function() {
+
+            languageSelect.addEventListener('change', function () {
                 const lang = this.value;
-                
+
                 langElements.forEach(element => {
                     if (element.dataset[lang]) {
                         element.textContent = element.dataset[lang];
                     }
                 });
-                
+
                 // Update placeholders for inputs
-                document.getElementById('message').placeholder = lang === 'es' 
+                document.getElementById('message').placeholder = lang === 'es'
                     ? "¿Cuál es tu interés o qué necesidades quieres que una Inteligencia Artificial cumpla? Describe brevemente lo que esperas o necesitas."
                     : "What is your interest or what needs do you want Artificial Intelligence to fulfill? Briefly describe what you expect or need.";
             });
-            
+
             // Form submission
-            document.getElementById('contactForm').addEventListener('submit', function(e) {
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
                 e.preventDefault();
                 alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
                 this.reset();
             });
-            
+
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
+                anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    
+
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
-                    
+
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         targetElement.scrollIntoView({
                             behavior: 'smooth'
                         });
-                        
+
                         // Close mobile menu if open
                         if (navLinks.classList.contains('active')) {
                             navLinks.classList.remove('active');
@@ -1500,17 +1629,17 @@
                     }
                 });
             });
-            
+
             // Animation on scroll
             function animateOnScroll() {
                 const elements = document.querySelectorAll('.benefit-card, .service-card, .tech-item, .pricing-plan');
-                
+
                 elements.forEach(element => {
                     if (isInViewport(element) && !element.classList.contains('animated')) {
                         element.classList.add('animated');
                         element.style.opacity = '0';
                         element.style.transform = 'translateY(20px)';
-                        
+
                         setTimeout(() => {
                             element.style.transition = 'all 0.5s ease-out';
                             element.style.opacity = '1';
@@ -1519,12 +1648,11 @@
                     }
                 });
             }
-            
+
             window.addEventListener('scroll', animateOnScroll);
             animateOnScroll(); // Run once on load
         });
     </script>
 </body>
+
 </html>
-
-
